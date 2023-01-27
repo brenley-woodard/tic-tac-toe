@@ -2,7 +2,6 @@ export default [
   {
     space: 0,
     content: '',
-    active: true,
   },
   {
     space: 1,
