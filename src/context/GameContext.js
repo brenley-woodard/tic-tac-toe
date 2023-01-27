@@ -11,17 +11,14 @@ const GameProvider = ({ children }) => {
 
   const handleClick = (space) => {
     const newBoard = board.map((box) => {
-      if (box.space === space) box.content = currentPlayer;
+      if ((box.space === space) & (box.content === '')) {box.content = currentPlayer;
+        currentPlayer === 'X' ? setCurrentPlayer('O') : setCurrentPlayer('X');
+      }
       return box;
     });
-    if (currentPlayer === 'X') {
-      setCurrentPlayer('O');
-    } else {
-      setCurrentPlayer('X');
-    }
     setBoard(newBoard);
   };
-
+ 
   return (
     <GameContext.Provider value={{ board, setBoard, currentPlayer, setCurrentPlayer, active, setActive, gameMessage, setGameMessage, handleClick }}>
       {children}
