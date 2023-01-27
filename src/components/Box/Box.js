@@ -1,12 +1,9 @@
 import React from 'react';
 import './Box.css';
+import { handleClick } from '../../context/GameContext';
 
-function handleClick() {
-  console.log('I am being clicked');
-}
-
-export default function Box() {
+export default function Box({ box }) {
   return (
-    <div className='box' onClick={handleClick}>Boxxx</div>
+    <div className='box' onClick={handleClick}>{box.content}</div>
   );
 }
