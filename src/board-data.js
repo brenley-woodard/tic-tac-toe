@@ -1,11 +1,11 @@
 export default [
   {
     space: 0,
-    content: 'X',
+    content: '',
   },
   {
     space: 1,
-    content: 'O',
+    content: '',
   },
   {
     space: 2,

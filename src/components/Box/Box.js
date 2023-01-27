@@ -1,9 +1,11 @@
 import React from 'react';
 import './Box.css';
-import { handleClick } from '../../context/GameContext';
+import { useGameContext } from '../../context/GameContext';
 
 export default function Box({ box }) {
+  const { handleClick } = useGameContext();
+  
   return (
-    <div className='box' onClick={handleClick}>{box.content}</div>
+    <div className='box' onClick={() => handleClick(box.space)}>{box.content}</div>
   );
 }
