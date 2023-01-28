@@ -26,6 +26,7 @@ const GameProvider = ({ children }) => {
     });
     setBoard(newBoard);
     checkWin();
+    checkScratch();
   };
  
   const checkWin = () => {
@@ -61,8 +62,13 @@ const GameProvider = ({ children }) => {
     // console.log('Winner!');
   };
 
+  const checkScratch = () => {
+    if ((board[0].content !== '') & (board[1].content !== '') & (board[2].content !== '') & (board[3].content !== '') & (board[4].content !== '') & (board[5].content !== '') & (board[6].content !== '') & (board[7].content !== '') & (board[8].content !== '')) console.log('cats game!');
+  };
+
+
   return (
-    <GameContext.Provider value={{ board, setBoard, currentPlayer, setCurrentPlayer, active, setActive, gameMessage, setGameMessage, handleClick, checkWin }}>
+    <GameContext.Provider value={{ board, setBoard, currentPlayer, setCurrentPlayer, active, setActive, gameMessage, setGameMessage, handleClick, checkWin, checkScratch }}>
       {children}
     </GameContext.Provider>
   );
