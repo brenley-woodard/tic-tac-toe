@@ -31,39 +31,25 @@ const GameProvider = ({ children }) => {
  
   const checkWin = () => {
     if ((board[0].content === board[1].content) & (board[0].content !== '') & (board[0].content === board[2].content))
-      setActive(false);
-    // console.log('Winner!');
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[3].content === board[4].content) & (board[3].content !== '') & (board[3].content === board[5].content))
-      setActive(false);
-    // console.log('Winner!');
-    
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[6].content === board[7].content) & (board[6].content !== '') & (board[6].content === board[8].content))
-      setActive(false);
-    // console.log('Winner!');
-    
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[0].content === board[3].content) & (board[0].content !== '') & (board[0].content === board[6].content))
-      setActive(false);
-    // console.log('Winner!');
-    
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[1].content === board[4].content) & (board[1].content !== '') & (board[1].content === board[7].content))
-      setActive(false);
-    // console.log('Winner!');
-    
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[2].content === board[5].content) & (board[2].content !== '') & (board[2].content === board[8].content))
-      setActive(false);
-    // console.log('Winner!');
-    
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[0].content === board[4].content) & (board[0].content !== '') & (board[0].content === board[8].content))
-      setActive(false);
-    // console.log('Winner!');
-  
+      setActive(false) & alert(`${currentPlayer} WON!`);
     if ((board[2].content === board[4].content) & (board[2].content !== '') & (board[2].content === board[6].content))
-      setActive(false);
-    // console.log('Winner!');
+      setActive(false) & alert(`${currentPlayer} WON!`);
   };
 
   const checkScratch = () => {
-    if ((board[0].content !== '') & (board[1].content !== '') & (board[2].content !== '') & (board[3].content !== '') & (board[4].content !== '') & (board[5].content !== '') & (board[6].content !== '') & (board[7].content !== '') & (board[8].content !== '')) console.log('cats game!');
+    if ((board[0].content !== '') & (board[1].content !== '') & (board[2].content !== '') & (board[3].content !== '') & (board[4].content !== '') & (board[5].content !== '') & (board[6].content !== '') & (board[7].content !== '') & (board[8].content !== '')) alert('CAT SCRATCH :/');
   };
 
 
