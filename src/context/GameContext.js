@@ -49,9 +49,8 @@ const GameProvider = ({ children }) => {
   };
 
   const checkScratch = () => {
-    if ((board[0].content !== '') & (board[1].content !== '') & (board[2].content !== '') & (board[3].content !== '') & (board[4].content !== '') & (board[5].content !== '') & (board[6].content !== '') & (board[7].content !== '') & (board[8].content !== '')) alert('CAT SCRATCH :/');
+    if ((board[0].content !== '') & (board[1].content !== '') & (board[2].content !== '') & (board[3].content !== '') & (board[4].content !== '') & (board[5].content !== '') & (board[6].content !== '') & (board[7].content !== '') & (board[8].content !== '') & setActive(true)) setActive(false) & alert('CAT SCRATCH :/');
   };
-
 
   return (
     <GameContext.Provider value={{ board, setBoard, currentPlayer, setCurrentPlayer, active, setActive, gameMessage, setGameMessage, handleClick, checkWin, checkScratch }}>
